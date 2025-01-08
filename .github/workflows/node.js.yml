@@ -36,7 +36,7 @@ jobs:
       - name: Test
         run: npm run ci
       - name: Coveralls Parallel
-        uses: coverallsapp/github-action@master
+        uses: coveralls/github-action@master
         with:
           github-token: ${{ secrets.github_token }}
           flag-name: node-${{ matrix.node-version }}
@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Coveralls Finished
-        uses: coverallsapp/github-action@master
+        uses: coveralls/github-action@master
         with:
           github-token: ${{ secrets.github_token }}
           path-to-lcov: ./coverage/lcov.info
